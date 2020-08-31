@@ -1,0 +1,43 @@
+.form {
+    margin-top: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 1.8rem;
+
+    @media screen and (min-width: 992px) {
+        margin-bottom: 2.5rem;
+    }
+
+    label {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+
+        @media screen and (min-width: 992px) {
+            font-size: 1.6rem;
+            margin-bottom: 1.4rem;
+        }
+    }
+
+    select.form-control,
+    .form-control[type=text],
+    .form-control[type=email],
+    textarea {
+        font-size: 1.4rem;
+        border-color: #979797;
+        border-radius: .4rem;
+        height: 3.6rem;
+        padding: 0.6rem 0.8rem;
+
+        @media screen and (min-width: 992px) {
+            font-size: 1.6rem;
+            padding: 1rem 1.5rem;
+            height: 5.4rem;
+        }
+    }
+
+    textarea {
+        min-height: 14rem;
+    }
+}

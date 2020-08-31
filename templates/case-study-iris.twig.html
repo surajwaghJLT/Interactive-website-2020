@@ -1,0 +1,79 @@
+{% extends "./layout/default.twig.html" %}
+
+{% block content %}
+    <section class="hero" style="background-image: url(../images/bg-case-study-iris.png);">
+        <div class="hero__content">
+            <div class="hero__content-inner container">
+                Automating risk information collection
+            </div>
+        </div>
+    </section>
+
+    <section class="section container problem">
+        <h2 class="section__heading text-left">The Problem</h2>
+
+        <p class="section__p">A client with a global presence approached Interactive for a solution to improve its underwriting data and risk information management as well as asset declaration processes. Its manual consolidation of risk information across its different regional and global offices was plagued with inefficiencies. One key challenge was the time taken to distribute questionnaires and consolidate values. The client also faced difficulties in the setup of locations and in the distribution of data collection forms.</p>
+
+        <p class="section__p">A third challenge was underwriting data collection at location level for Material Damage, Business Interruption and Combined General Liability. In consulting with Interactive, other gaps were identified, including the difficulty of making changes to data collection forms or questionnaires, tracking the data collation progress and the inability to preview and use the previous year's data.</p>
+
+        <div class="row issues">
+            <div class="col-lg-4 issues__item">
+                <div class="issues__heading">Issue: 1</div>
+                <div class="">Time taken to distribute questionnaires and consolidate values</div>
+            </div>
+            <div class="col-lg-4 issues__item">
+                <div class="issues__heading">Issue: 2</div>
+                <div class="">Difficulties in the setup of locations and in the distribution of data collection forms.</div>
+            </div>
+            <div class="col-lg-4 issues__item">
+                <div class="issues__heading">Issue: 3</div>
+                <div class="">Underwriting data collection at location level for Material Damage, Business Interruption and Combined General Liability</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container">
+        <h2 class="section__heading text-left">The Solution</h2>
+
+        <p class="section__p">Interactive introduced its proprietary Insurance and Risk Information System (iRIS) to address these challenges. iRIS enabled the company to customise risk assessment questionnaires and disseminate them via an integrated online portal. This powerful platform – made accessible to its various business in different locations as well as risk manager – formed a single hub for the streamlined creation, location management and collection of data. A notification system also improved turnaround times by reminding stakeholders of their responsibilities. In addition to this, the system eliminated the need to manually consolidate data. Instead reports could be automatically generated, speeding up the process from weeks to just a few days. An added bonus was the reduction of human error.</p>
+
+        <div class="solution">
+            <img class="solution__img" src="../images/iris.png" />
+
+            <div class="row justify-content-center">
+                <div class="col-lg-4 solution__item first-of-three">
+                    <div class="solution__heading">Solution:</div>
+                    <div class="">Enable easy customisation and dissemination of risk assessment questionnaire via an integrated online portal</div>
+
+                    <hr class="solution__separator" />
+                </div>
+                <div class="col-lg-4 solution__item second-of-three">
+                    <div class="solution__heading">Solution:</div>
+                    <div class="">Allow real-time monitoring at any point in the data collection</div>
+
+                    <hr class="solution__separator" />
+                </div>
+                <div class="col-lg-4 solution__item third-of-three">
+                    <div class="solution__heading">Solution:</div>
+                    <div class="">24-7 access facilitates and streamlines the creation, location management and collection of data</div>
+                </div>
+            </div>
+        </div>
+
+        <p class="section__p">Risk managers found the ability to monitor the process invaluable as it allowed them to take a snapshot of results at any point in the data collection. Another useful function was iRIS' in-built currency conversion capability which automatically converts values declared in the local currencies into the corporate currency vis-à-vis client-defined exchange rates. Risk managers and respondents also found the feature to organise cover notes and policy documents into multiple folders useful. This feature allows authorised users to search for policy documents according to their content.</p>
+            
+        <p class="section__p">The client was also able to benefit from iRIS in subsequent years. Each annual data declaration has been made easier as users are now able to copy over previous year's values to current year declarations. Overall, the client reported a significant improvement in global and local policy management and productivity.</p>
+    </section>
+
+    <div class="container">
+        <hr class="separator" />
+    </div>
+
+    <section class="view-more">
+        <h2 class="view-more__heading">Contact Us</h2>
+        <p class="view-more__sub">Energise your business today!</p>
+        <a class="btn btn--info-2" href="./contact.html">Enquire</a>
+    </section>
+{% endblock %}
+
+{% block js %} {% endblock %}

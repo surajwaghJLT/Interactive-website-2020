@@ -1,0 +1,146 @@
+.slides {
+    @include element("item") {
+        position: relative;
+    }
+
+    @include element("img") {
+        min-height: 9rem;
+
+        @media screen and (min-width: 992px) {
+            min-height: 28rem;
+        }
+    }
+
+    @include element("content") {
+        position: absolute;
+        bottom: 2.4rem;
+        left: 3.2rem;
+        color: #fff;
+        font-size: 1.4rem;
+        margin: 0;
+
+        @media screen and (min-width: 992px) {
+            bottom: 7rem;
+            left: 10rem;
+            letter-spacing: -0.87px;
+            line-height: 3.7rem;
+            font-size: 3.2rem;
+        }
+    }
+}
+
+.flexslider {
+    border: 0 none;
+    margin: 2rem 0 0;
+
+    @media screen and (min-width: 992px) {
+        margin-top: 4rem;
+    }
+
+    .flex-direction-nav {
+        a,
+        a::before {
+            color: rgba(#fff, 0.8);
+            font-size: 2.5rem;
+            width: 3rem;
+            height: 3rem;
+
+            @media screen and (min-width: 992px) {
+                font-size: 3.5rem;
+                width: 4rem;
+                height: 4rem;
+            }
+
+            &:hover {
+                color: rgba(#fff, 1);
+            }
+        }
+
+        .flex-nav-prev,
+        .flex-nav-next {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 2.6rem;
+                background-color: rgba(#000, 0.1);
+
+                @media screen and (min-width: 992px) {
+                    width: 4.6rem;
+                }
+            }
+        }
+
+        .flex-nav-prev {
+            &::before {
+                left: 0;
+            }
+        }
+
+        .flex-nav-next {
+            &::before {
+                right: 0;
+            }
+        }
+
+        .flex-next,
+        .flex-prev {
+            opacity: 0.8;
+        }
+
+        .flex-next {
+            right: 0.5rem;
+
+            @media screen and (min-width: 992px) {
+                right: 1rem;
+            }
+        }
+
+        .flex-prev {
+            left: 0.5rem;
+
+            @media screen and (min-width: 992px) {
+                left: 1rem;
+            }
+        }
+    }
+}
+
+.flex-control-nav {
+    bottom: 0.7rem;
+
+    @media screen and (min-width: 992px) {
+        bottom: 2rem;
+    }
+}
+
+.flex-control-paging {
+    height: 1rem;
+
+    @media screen and (min-width: 992px) {
+        height: 1.5rem;
+    }
+
+    li {
+        a {
+            background-color: transparent;
+            border: 1px solid #fff;
+            width: 0.45rem;
+            height: 0.45rem;
+
+            @media screen and (min-width: 992px) {
+                width: 0.9rem;
+                height: 0.9rem;
+            }
+
+            &:hover {
+                background-color: rgba(#fff, 0.7);
+            }
+
+            &.flex-active {
+                background-color: #fff;
+            }
+        }
+    }
+}

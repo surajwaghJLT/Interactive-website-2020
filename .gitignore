@@ -2,5 +2,5 @@
 /html/
 /js/bundle*.js
 /js/plugins*.js
-/style/main.css
-/style/main.css.map
+/style/app.css
+/style/app.css.map

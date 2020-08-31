@@ -1,0 +1,33 @@
+{% set page = "index" %}
+{% extends "./layout/default.twig.html" %}
+
+{% block content %}
+    <section class="hero" style="background-image: url(../images/bg-network-globe.png);">
+    </section>
+
+    <section class="section container">
+        <div class="section__heading-icon-box">
+            <div class="section__heading-icon-box__inner">
+                <img class="section__heading-icon" src="../images/ui-ux.png" />
+            </div>
+        </div>
+
+        <h1 class="section__heading is-page">User Interface and User Experience</h1>
+
+        <p class="section__p">User interface (UI) and user experience (UX) is an integral part of what we do. The design, look, feel and experience of our products make for a better user journey.</p>
+
+        <div class="section__sub is-page">&ldquo;We believe a good user experience lies at the core of our products. We translate concepts and functions into beautiful, seamless, intuitive and easy-to-use interfaces.&rdquo;</div>
+
+        <p class="section__p">At Interactive, good user experience and good design go hand-in-hand. Our UX team and UI team members understand and believe in the complementary and necessary roles of UX and UI. Working with you, they bring about quality solutions that deliver both function and aesthetical value.</p>
+    </section>
+
+    <div class="container">
+        <hr class="separator" />
+    </div>
+
+    <section class="view-more">
+        <a class="btn btn--info" href="./">Back To Homepage</a>
+    </section>
+{% endblock %}
+
+{% block js %} {% endblock %}
