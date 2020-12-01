@@ -1,17 +1,20 @@
+{% set pageTitle = "Digital Solution Provider | Interactive" %}
 {% set page = "about-us" %}
 {% extends "./layout/default.twig.html" %}
 
 {% block content %}
-    <section class="hero" style="background-image: url(../images/bg-network-globe.png);">
+    <section class="hero is-lg" style="background-image: url(../images/bg-network-globe.jpg);">
         <div class="hero__content">
             <div class="hero__content-inner container">
-                JLT Interactive is the Digital Solution Provider; we deliver tailor made digital solutions for the insurance and Risk Management Space
+                JLT Interactive a digital solution provider specializing in the development of Insurance and Risk Management software solutions and products.
             </div>
         </div>
     </section>
 
     <section class="section container about-us">
-        <img class="about-us__infographic-img" src="../images/who-we-are-Infographic.png" alt="JLT Interactive Infographic" />
+        <a class="d-none" href="#!" data-toggle="modal" data-target="#modalInfographic">
+            <img class="about-us__infographic-img" src="../images/who-we-are-Infographic.jpg" alt="JLT Interactive Infographic" />
+        </a>
         <div class="">
             <h1 class="section__heading text-left">We are Interactive</h1>
 
@@ -31,7 +34,7 @@
         </div>
     </section>
 
-    <section class="section container">
+    <section class="section container d-none">
         <h2 class="section__heading m-left">Our Services</h2>
 
         <div class="section__sub m-left">Specialists in tailor-made insurance and risk management solutions</div>
@@ -84,15 +87,67 @@
         </div>
     </section>
 
-    <div class="container">
-        <hr class="separator" />
-    </div>
+    <section class="section container global-reach">
+        <h2 class="section__heading">Our Global Reach</h2>
+
+        <div class="global-reach__facts">
+            <div class="global-reach__facts-inner">
+                <div class="global-reach__fact-left">
+                    <div class="global-reach__fact po-1">
+                        <div class="global-reach__fact-num">15+ Years</div>
+                        <div class="global-reach__fact-what">In the business</div>
+                    </div>
+                    <div class="global-reach__fact po-2">
+                        <div class="global-reach__fact-num">Over 400</div>
+                        <div class="global-reach__fact-what">Renewals</div>
+                    </div>
+                    <div class="global-reach__fact po-3">
+                        <div class="global-reach__fact-num">Over 2 Million</div>
+                        <div class="global-reach__fact-what">Transactions</div>
+                    </div>
+                </div>
+
+                <div class="global-reach__fact-right">
+                    <div class="global-reach__fact po-4">
+                        <div class="global-reach__fact-num">Over 100 Countries</div>
+                        <div class="global-reach__fact-what">Client Locations</div>
+                    </div>
+                    <div class="global-reach__fact po-5">
+                        <div class="global-reach__fact-num">50+</div>
+                        <div class="global-reach__fact-what">Consultants & Specialists</div>
+                    </div>
+                    <div class="global-reach__fact po-6">
+                        <div class="global-reach__fact-num">2</div>
+                        <div class="global-reach__fact-what">Development & Support Centres</div>
+                    </div>
+                </div>
+            </div>
+            <div class="global-reach__facts-ra">&rsaquo;</div>
+        </div>
+
+        <img class="global-reach__img img-fluid" src="../images/global-reach.png" alt="Interactive Global Reach" />
+    </section>
+
+    <hr class="separator" />
 
     <section class="view-more">
         <h2 class="view-more__heading">Contact Us</h2>
         <p class="view-more__sub">Energise your business today!</p>
         <a class="btn btn--info-2" href="./contact.html">Enquire</a>
     </section>
+
+    <div class="modal" id="modalInfographic" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="image">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <img class="about-us__infographic-img is-modal" src="../images/who-we-are-Infographic.jpg" alt="JLT Interactive Infographic" />
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block js %} {% endblock %}

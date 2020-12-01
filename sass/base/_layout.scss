@@ -7,11 +7,12 @@ html {
 body {
     font: normal 1.4rem Arial, Helvetica, sans-serif;
     // footer height
-    margin-bottom: 15rem; 
+    margin-bottom: 12rem;
     // sticky header height
     padding-top: 6rem;
 
     @media screen and (min-width: 992px) {
+        margin-bottom: 15rem; 
         // sticky header height
         padding-top: 8rem;
     }
@@ -21,10 +22,32 @@ body {
     }
 }
 
+.container {
+    @media screen and (min-width: 1400px) {
+        max-width: 1260px;
+    }
+}
+
 .separator {
     background-color: rgba(#979797, 0.5);
     margin: 0 auto;
-    max-width: 100rem;
+    width: calc(100% - 30px);
+
+    @media screen and (min-width: 576px) {
+        max-width: 51rem;
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 69rem;
+    }
+
+    @media screen and (min-width: 992px) {
+        max-width: 93rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 100rem;
+    }
 }
 
 sup.required {
@@ -59,9 +82,9 @@ sup.required {
         line-height: 2.1rem;
 
         @media screen and (min-width: 992px) {
-            height: 60rem;
+            height: 40rem;
             font-size: 3.6rem;
-            line-height: 4.2rem;
+            line-height: 4.3rem;
         }
     }
 
@@ -81,6 +104,7 @@ sup.required {
         @media screen and (min-width: 992px) {
             .is-lg & {
                 width: 65%;
+                max-width: 94.5rem;
             }
         }
     }
@@ -91,8 +115,8 @@ sup.required {
     padding-bottom: 1.6rem;
 
     @media screen and (min-width: 992px) {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+        padding-top: 5.4rem;
+        padding-bottom: 5.4rem;
     }
 
     @include element("heading-icon-box") {
@@ -173,7 +197,7 @@ sup.required {
 
         @media screen and (min-width: 992px) {
             font-size: 2.2rem;
-            margin-top: 2.2rem;
+            margin-top: 1.8rem;
         }
 
         // text align left in mobile view
@@ -202,18 +226,22 @@ sup.required {
 
         @media screen and (min-width: 992px) {
             font-size: 1.8rem;
-            line-height: 2.2rem;
+            line-height: 2.6rem;
             margin-top: 2rem;
         }
     }
 
     @include element("points") {
         color: #808080;
-        font-size: 1.6rem;
         list-style: none;
 
         li {
             text-indent: -.5rem;
+
+            @media screen and (min-width: 992px) {
+                font-size: 1.7rem;
+                margin-top: .5rem;
+            }
 
             &:before {
                 content: "-";
@@ -255,7 +283,7 @@ sup.required {
 
         @media screen and (min-width: 992px) {
             display: block;
-            padding: 3rem 1rem;
+            padding: 3rem 2rem;
         }
 
         &:hover {
@@ -294,7 +322,7 @@ sup.required {
     @include element("desc") {
         color: #808080;
         font-size: 1.4rem;
-        margin-top: 0.4rem;
+        margin-top: 0.6rem;
 
         @media screen and (min-width: 992px) {
             text-align: center;
@@ -317,7 +345,7 @@ sup.required {
         margin: 0;
 
         @media screen and (min-width: 992px) {
-            font-size: 3.2rem;
+            font-size: 2.6rem;
         }
     }
 
@@ -438,24 +466,77 @@ sup.required {
 
     @include element("fact-num") {
         color: #404040;
-        border-bottom: 1px solid #00A8C8;
+        border-bottom: 2px solid #00A8C8;
         display: block;
         font-size: 1.4rem;
 
         @media screen and (min-width: 992px) {
             display: inline-block;
-            font-size: 1.6rem;
+            font-size: 2.2rem;
         }
     }
 
     @include element("fact-what") {
-        color: #A6ABB2;
+        color: #808080;
         margin-top: 0.8rem;
         font-size: 1.2rem;
 
         @media screen and (min-width: 992px) {
-            font-size: 1.6rem;
+            font-size: 2.2rem;
         }
+    }
+}
+
+.testimonial {
+    background-color: #016D9E;
+    color: #FFF;
+
+    @media screen and (min-width: 992px) {
+        padding-top: 3.7rem;
+        padding-bottom: 2.7rem;
+    }
+
+    .section__heading {
+        color: #FFF;
+    }
+
+    @include element("list") {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    @include element("item") {}
+
+    @include element("text") {
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+        padding-top: 1.6rem;
+        padding-left: 4.5rem;
+        padding-right: 4.5rem;
+
+        @media screen and (min-width: 992px) {
+            font-size: 1.8rem;
+            padding-top: 5.5rem;
+            padding-left: 7rem;
+            padding-right: 7rem;
+        }
+    }
+
+    @include element("pic") {
+        padding-top: 2rem;
+        text-align: center;
+    }
+
+    @include element("by") {
+        font-size: 1.8rem;
+        padding-top: 2.2rem;
+        text-align: center;
+    }
+
+    .swiper-button-next, 
+    .swiper-button-prev {
+        color: #FFF;
     }
 }
 
@@ -487,7 +568,7 @@ sup.required {
         font-weight: 600;
         line-height: 1.6rem;
         position: relative;
-        text-indent: 2.3rem;
+        padding-left: 2.3rem;
 
         @media screen and (min-width: 992px) {
             font-size: 1.6rem;
@@ -502,11 +583,11 @@ sup.required {
             content: "";
             position: absolute;
             border-radius: 50%;
-            top: 0.4rem;
+            top: 0.1rem;
             left: 0;
-            width: 1rem;
-            height: 1rem;
-            border: 1px solid #404040;
+            width: 1.4rem;
+            height: 1.4rem;
+            border: 1px solid #808080;
         }
     }
 }
@@ -517,7 +598,7 @@ sup.required {
     }
 
     @media screen and (min-width: 992px) {
-        margin-top: 6rem;
+        margin-top: 4rem;
     }
 
     @include element("item") {
@@ -560,7 +641,7 @@ sup.required {
         color: #808080;
         font-size: 1.4rem;
         line-height: 2.0rem;
-        padding: 0.7rem 0.9rem;
+        padding: 1rem 1.3rem;
 
         @media screen and (min-width: 768px) {
             border-radius: 0 0 1rem 1rem;
@@ -592,8 +673,22 @@ sup.required {
         @media screen and (min-width: 992px) {
             float: right;
             margin: 0 0 5rem 5rem;
-            width: 50%;
+            width: 47%;
         }
+
+        &.is-modal {
+            box-shadow: none;
+            border: 0 none;
+            margin: 0;
+            padding: 0 1rem 1rem 1rem;
+            width: 100%;
+
+            @media screen and (min-width: 992px) {
+                padding: 0 3rem 3rem 3rem;
+            }
+        }
+
+        
     }
 
     @include element("list") {
@@ -602,7 +697,7 @@ sup.required {
         padding: 0;
 
         @media screen and (min-width: 992px) {
-            margin: 0 0 0 2rem;
+            margin: 0 0 0 1.4rem;
         }
     }
 
@@ -612,7 +707,7 @@ sup.required {
         font-weight: 600;
         line-height: 1.8rem;
         margin-top: 1.8rem;
-        padding-left: 1.5rem;
+        padding-left: 2.1rem;
         position: relative;
 
         @media screen and (min-width: 992px) {
@@ -623,12 +718,12 @@ sup.required {
         &::before {
             content: "";
             position: absolute;
-            top: 0.5rem;
+            top: 0.1rem;
             left: 0;
             border-radius: 50%;
-            width: 0.5rem;
-            height: 0.5rem;
-            background-color: #F2A900;
+            width: 1.4rem;
+            height: 1.4rem;
+            border: 0.1rem solid #808080;
         }
     }
 }
@@ -664,7 +759,7 @@ sup.required {
         @media screen and (min-width: 992px) {
             font-size: 2.8rem;
             height: 6.8rem;
-            margin-bottom: 3.3rem;
+            margin-bottom: 2.5rem;
         }
 
         .is-right & {
@@ -672,8 +767,6 @@ sup.required {
             
             @media screen and (min-width: 768px) {
                 background-color: #00B0D3;
-                border-radius: 5rem 0 0 5rem;
-                justify-content: flex-start;
                 float: right;
             }
         }
@@ -683,6 +776,15 @@ sup.required {
                 background-color: #084D8B;
             }
         }
+
+        sup {
+            font-weight: normal;
+            font-size: 1.5rem;
+
+            @media screen and (min-width: 992px) {
+                font-size: 2.2rem;
+            }
+        }
     }
 
     @include element("desc") {
@@ -690,19 +792,17 @@ sup.required {
         color: #808080;
         font-size: 1.4rem;
         line-height: 1.6rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
         max-width: 42rem;
 
         @media screen and (min-width: 992px) {
             font-size: 2rem;
-            line-height: 2.3rem;
+            line-height: 2.6rem;
         }
 
         .is-right & {
             @media screen and (min-width: 768px) {
-                text-align: right;
                 float: right;
+                max-width: 39rem;
             }
         }
     }
@@ -711,11 +811,17 @@ sup.required {
         color: #404040;
         display: inline-block;
         margin-top: 1rem;
-        text-decoration: underline;
+        text-decoration: none;
+        border-bottom: 1px solid #404040;
+
+        @media screen and (min-width: 992px) {
+            font-size: 1.6rem;
+        }
 
         &:hover,
         &:focus {
             color: #404040;
+            border-bottom: 0 none;
             text-decoration: none;
         }
     }
@@ -743,10 +849,10 @@ sup.required {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 16rem;
+        max-width: 16rem;
 
         @media screen and (min-width: 992px) {
-            width: auto;
+            max-width: none;
         }
     }
 
@@ -772,19 +878,19 @@ sup.required {
 
         @media screen and (min-width: 992px) {
             font-size: 2.8rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.8rem;
         }
     }
 
     @include element("p") {
         color: #808080;
         font-size: 1.4rem;
-        line-height: 1.6rem;
+        line-height: 2rem;
         margin-bottom: 1.4rem;
         
         @media screen and (min-width: 992px) {
             font-size: 1.8rem;
-            line-height: 2rem;
+            line-height: 2.5rem;
             margin-bottom: 2rem;
         }
     }
@@ -810,11 +916,13 @@ sup.required {
             padding: 0 10% 4rem 10%;
         }
 
-        a {
+        a,
+        .content {
             color: #FFF;
 
             &:hover,
             &:focus {
+                color: #FFF;
                 text-decoration: none;
             }
         }
@@ -845,13 +953,12 @@ sup.required {
     }
 
     @include element("sub-heading") {
-        color: #404040;
-        font-size: 1.6rem;
+        color: #4E4E4E;
+        font-size: 1.4rem;
         font-weight: 600;
-        margin-bottom: 0.4rem;
 
         @media screen and (min-width: 992px) {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
         }
     }
 
@@ -872,18 +979,14 @@ sup.required {
 }
 
 .contact {
-    margin-top: 2rem;
-    padding-left: 1.5rem;
+    margin-top: 4rem;
 
     @media screen and (min-width: 992px) {
-        margin-top: 0;
-        padding-left: 5rem;
     }
 
     @include element("map") {
-        border: 0.2rem solid rgba(#979797, 0.5);
-        border-radius: 0.4rem;
-        height: 28rem;
+        border: 0.2rem solid rgba(#808080, 0.6);
+        height: 34rem;
     }
 
     @include element("heading") {
@@ -895,7 +998,8 @@ sup.required {
         margin-top: 2rem;
 
         @media screen and (min-width: 992px) {
-            font-size: 1.8rem;
+            font-size: 2.4rem;
+            margin-top: 3.2rem;
         }
     }
 
@@ -908,8 +1012,7 @@ sup.required {
         margin-top: 1.8rem;
 
         @media screen and (min-width: 992px) {
-            font-size: 1.6rem;
-            letter-spacing: -0.43px;
+            font-size: 1.8rem;
         }
     }
 
@@ -1103,5 +1206,32 @@ sup.required {
                 }
             }
         }
+    }
+}
+
+.modal-content {
+    border-radius: 1rem;
+}
+
+.modal-header {
+    border-bottom: 0 none;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    .close {
+        font-size: 3.6rem;
+
+        @media screen and (min-width: 992px) {
+            outline: none;
+            padding: 0.5rem 3rem;
+        }
+    }
+}
+
+.m-t-normal {
+    margin-top: 1.6rem;
+
+    @media screen and (min-width: 992px) {
+        margin-top: 5.4rem;
     }
 }

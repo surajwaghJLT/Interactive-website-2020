@@ -1,3 +1,4 @@
+{% set pageTitle = "Contact us | Interactive" %}
 {% set page = "contact" %}
 {% extends "./layout/default.twig.html" %}
 
@@ -5,8 +6,7 @@
     <section class="hero" style="background-image: url(../images/bg-contact-us.jpg);">
         <div class="hero__content">
             <div class="hero__content-inner container">
-                For general inquiries or to reach a Interactive colleague, <br>
-                please provide the information requested in the form below.
+                Contact us
             </div>
         </div>
     </section>
@@ -14,94 +14,23 @@
     <section class="section container">
         <h1 class="section__heading text-left">Contact us</h1>
         
-        <div class="row">
-            <div class="col-lg-7">
+        <div class="contact">
+            <div class="contact__map" id="g-map"></div>
 
-                <form class="form" method="POST" action="./contact.html">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="lblName">Name<sup class="required">*</sup></label>
-                                <input class="form-control" 
-                                    id="lblName" 
-                                    type="text" >
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="lblEmail">Email Address<sup class="required">*</sup></label>
-                                <input 
-                                    class="form-control" 
-                                    id="lblEmail"
-                                    type="email" >
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="lblContact">Contact Number<sup class="required">*</sup></label>
-                                <input 
-                                    class="form-control" 
-                                    id="lblContact"
-                                    type="email" >
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="lblContact">Country/Region<sup class="required">*</sup></label>
-                                <select 
-                                    class="form-control" 
-                                    id="lblContact"
-                                    name="">
-                                    <option value="">Select</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="lblProduct">What product are you interested in?<sup class="required">*</sup></label>
-                                <select 
-                                    class="form-control" 
-                                    id="lblProduct"
-                                    name="">
-                                    <option value="">Select</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-group">
-                                <label for="lblDesc">How can we help?<sup class="required">*</sup></label>
-                                <textarea 
-                                    class="form-control" 
-                                    id="lblDesc"
-                                    name=""
-                                    ></textarea>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn btn--primary" type="submit">Submit</button>
-                        </div>
-                    </div>
-                
-                </form>
+            <div class="contact__heading">Office Location</div>
+            <p class="contact__p">8, #09-02 Marina View, Asia Square Tower 1, 018960</p>
 
-            </div>
-            <div class="col-lg-5 contact">
-                <div class="contact__map" id="g-map"></div>
-
-                <div class="contact__heading">Office Location</div>
-                <p class="contact__p font-weight-bold">8, #09-02 Marina View, Asia Square Tower 1, 018960</p>
-
-                <div class="contact__heading">Email or Call us</div>
-                <p class="contact__p">
-                    <i class="icon-envelop contact__icon"></i>
-                    JLTi_Info@jltasia.com
-                </p>
-                <p class="contact__p">
-                    <i class="icon-phone contact__icon"></i>
-                    +65 xxxx-xxxx
-                </p>
-            </div>
+            <div class="contact__heading">Email or Call us</div>
+            <p class="contact__p">
+                <i class="icon-envelop contact__icon"></i>
+                interactive_info@mmc.com
+            </p>
+            <p class="contact__p">
+                <i class="icon-phone contact__icon"></i>
+                +65 6500 0495
+            </p>
         </div>
+        
     </section>
 {% endblock %}
 

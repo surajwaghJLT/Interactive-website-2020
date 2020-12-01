@@ -1,8 +1,9 @@
+{% set pageTitle = "Our Products and Solutions | Interactive" %}
 {% set page = "services" %}
 {% extends "./layout/default.twig.html" %}
 
 {% block content %}
-    <section class="hero" style="background-image: url(../images/bg-what-we-offer.png);">
+    <section class="hero" style="background-image: url(../images/bg-what-we-offer.jpg);">
         <div class="hero__content">
             <div class="hero__content-inner container">
                 Our flagship interactive solutions are highly scalable and easily deployed to address big industry problems, putting power back into your hands
@@ -18,9 +19,9 @@
         <div class="row vertical-separator mt-4">
             <div class="col-md-6">
                 <div class="product">
-                    <div class="product__name">iCargo</div>
+                    <div class="product__name">iCargo<sup>&reg;</sup></div>
                     <div class="product__desc">
-                        iCargo is our proprietary, Online cargo insurance management system to manage end to end Cargo Insurance including client's management.
+                        Our proprietary end to end Cargo Insurance system specifically for the Marine Cargo business.
                         <br />
                         <a class="product__read-more" href="./icargo.html">Read More</a>
                     </div>
@@ -28,6 +29,36 @@
             </div>
             <div class="col-md-6">
                 <div class="product is-right is-alt">
+                    <div class="product__name">iRIS</div>
+                    <div class="product__desc">
+                        Enterprise Risk Management (ERM) and Risk Management Information System (RMIS)
+                        <br />
+                        <a class="product__read-more" href="./iris.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product is-alt">
+                    <div class="product__name">Insure Portal</div>
+                    <div class="product__desc">
+                        A Dedicated insurance turnkey portal for startups and SMEs in the UAE.
+                        <br />
+                        <a class="product__read-more" href="./insure-portal.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product is-right">
+                    <div class="product__name">iCOVER</div>
+                    <div class="product__desc">
+                        Online Insurance Solution to manage workflow and certificates issuance.
+                        <br />
+                        <a class="product__read-more" href="./icover.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product">
                     <div class="product__name">iCLAIMS</div>
                     <div class="product__desc">
                         Online, customer facing end-to-end claims life cycle management system.
@@ -37,38 +68,8 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="product is-alt">
-                    <div class="product__name">iRIS</div>
-                    <div class="product__desc">
-                        Online Risk Information Management (RIMS) and Enterprise Risk Management (ERM) solution.
-                        <br />
-                        <a class="product__read-more" href="./iris.html">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="product is-right">
-                    <div class="product__name">iCOVER</div>
-                    <div class="product__desc">
-                        An electronic customer facing solution to manage workflows associated with the issuance of insurance certificate under an agreed facility.
-                        <br />
-                        <a class="product__read-more" href="./icover.html">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="product">
-                    <div class="product__name">Client Portal</div>
-                    <div class="product__desc">
-                        Client Portal is a seamless web based platform to support collaboration with clients and insurers. The secured functional design enables specific templates configuration to support quick deployment with fully bespoke solutions for more complex needs.
-                        <br />
-                        <a class="product__read-more" href="./client-portal.html">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
                 <div class="product is-right is-alt">
-                    <div class="product__name">BENPAL Asia</div>
+                    <div class="product__name">Benpal Asia</div>
                     <div class="product__desc">
                         Online customer facing Employee Group, Flexible Benefits Management System.
                         <br />
@@ -78,11 +79,11 @@
             </div>
             <div class="col-md-6">
                 <div class="product is-alt">
-                    <div class="product__name">Insure Portal</div>
+                    <div class="product__name">Client Portal</div>
                     <div class="product__desc">
-                        An Affinity Portal selling Group Health Insurance and Other Policies.
+                        Client Portal is a seamless web based platform to support collaboration with clients
                         <br />
-                        <a class="product__read-more" href="./insure-portal.html">Read More</a>
+                        <a class="product__read-more" href="./client-portal.html">Read More</a>
                     </div>
                 </div>
             </div>
@@ -99,9 +100,7 @@
         </div>
     </section>
 
-    <div class="container">
-        <hr class="separator" />
-    </div>
+    <hr class="separator" />
 
     <section class="section container">
         <h2 class="section__heading">Other Applications & Competencies</h2>
@@ -139,32 +138,60 @@
         </div>
     </section>
 
-    <div class="container">
-        <hr class="separator" />
-    </div>
+    <hr class="separator" />
 
     <section class="section container">
         <h2 class="section__heading">Case Studies</h2>
 
         <div class="section__sub">We don't just build products, we create solutions.</div>
 
-        <div class="flexslider">
-            <ul class="slides">
-                <li class="slides__item">
-                    <img class="slides__img" src="../images/case-study-icargo.jpg">
+        <div class="slider-cases swiper-container">
+            <ul class="slides swiper-wrapper">
+                <li class="slides__item swiper-slide">
+                    <img class="slides__img" src="../images/case-study-icargo.jpg" alt="iCargo case study">
                     <p class="slides__content flex-caption">Taking the Complexity out of Cargo Insurance</p>
                 </li>
-                <li class="slides__item">
-                    <img class="slides__img" src="../images/case-study-iclaims.jpg">
-                    <p class="slides__content flex-caption">slide 2</p>
+                <li class="slides__item swiper-slide">
+                    <img class="slides__img" src="../images/case-study-iris.jpg" alt="iRIS case study">
+                    <p class="slides__content flex-caption">Automating risk information collection</p>
+                </li>
+                <li class="slides__item swiper-slide">
+                    <img class="slides__img" src="../images/case-study-insure-portal.jpg" alt="Insure Portal case study">
+                    <p class="slides__content flex-caption">Protect your Health and Business with Insure Portal</p>
+                </li>
+                <li class="slides__item swiper-slide">
+                    <img class="slides__img" src="../images/case-study-icover.jpg" alt="iCover case study">
+                    <p class="slides__content flex-caption">Supporting insurance for the construction sector</p>
+                </li>
+                <li class="slides__item swiper-slide">
+                    <img class="slides__img" src="../images/case-study-iclaims.jpg" alt="iClaims case study">
+                    <p class="slides__content flex-caption">Streamlining claims administration</p>
+                </li>
+                <li class="slides__item swiper-slide">
+                    <img class="slides__img" src="../images/x.jpg" alt="Benpal Asia case study">
+                    <p class="slides__content flex-caption">TODO: Employment Benefit Management</p>
+                </li>
+                <li class="slides__item swiper-slide">
+                    <img class="slides__img" src="../images/x.jpg" alt="Client Portal case study">
+                    <p class="slides__content flex-caption">TODO: Client Portal case study</p>
+                </li>
+                <li class="slides__item swiper-slide">
+                    <img class="slides__img" src="../images/x.jpg" alt="Affinity Systems case study">
+                    <p class="slides__content flex-caption">TODO: Affinity Systems case study</p>
                 </li>
             </ul>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <div class="swiper-button-next-wrapper"></div>
+            <div class="swiper-button-prev-wrapper"></div>
         </div>
     </section>
 
-    <div class="container">
-        <hr class="separator" />
-    </div>
+    <hr class="separator" />
 
     <section class="view-more">
         <h2 class="view-more__heading">Contact Us</h2>

@@ -1,0 +1,444 @@
+.speciality-container {
+    @media screen and (min-width: 992px) {
+        position: relative;
+        height: 43.4rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+        height: 54rem;
+    }
+}
+
+.speciality {
+    @include element("hex") {
+        height: 100%;
+
+        @media screen and (min-width: 992px) {
+            width: 80px;
+            height: 139.2px;
+            background-color: #016D9E;
+            color: #FFF;
+            position: relative;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 100px;
+            height: 174px;
+        }
+
+        &::before,
+        &::after {
+            @media screen and (min-width: 992px) {
+                content: "";
+                position: absolute;
+                width: 0;
+            }
+        }
+
+        &::before {
+            @media screen and (min-width: 992px) {
+                top: 0;
+                left: -40px;
+                border-right: 40px solid #016D9E;
+                border-top: 69.6px solid transparent;
+                border-bottom: 69.6px solid transparent;
+            }
+
+            @media screen and (min-width: 1200px) {
+                left: -50px;
+                border-right-width: 50px;
+                border-top-width: 87px;
+                border-bottom-width: 87px;
+            }
+        }
+
+        &::after {
+            @media screen and (min-width: 992px) {
+                top: 0;
+                right: -40px;
+                border-left: 40px solid #016D9E;
+                border-top: 69.6px solid transparent;
+                border-bottom: 69.6px solid transparent;
+            }
+
+            @media screen and (min-width: 1200px) {
+                right: -50px;
+                border-left-width: 50px;
+                border-top-width: 87px;
+                border-bottom-width: 87px;
+            }
+        }
+
+        @include element("inner") {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #FFF;
+            background-color: #016d9e;
+
+            @media screen and (min-width: 992px) {
+                display: block;
+                background-color: inherit;
+                color: inherit;
+                width: calc(100% + 2px);
+                height: calc(100% - 10px);
+                position: absolute;
+                top: 5px;
+                left: -1px;
+            }
+
+            @at-root .is-active & {
+                background-color: #00a8c8;
+
+                @media screen and (min-width: 992px) {
+                    background-color: inherit;
+                }
+            }
+        }
+    }
+
+    @include element("icon") {
+        @media screen and (min-width: 992px) {
+            display: block;
+            margin: 0.5rem auto 0 auto;
+            max-width: 5.2rem;
+        }
+
+        @media screen and (min-width: 1200px) {
+            margin-top: 2rem;
+            max-width: none;
+        }
+    }
+
+    @include element("label") {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-top: 1rem;
+
+        @media screen and (min-width: 992px) {    
+            margin-top: 0;
+            text-align: center;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            right: -20px;
+            z-index: 5;
+        }
+    }
+}
+
+.speciality__hex.thin-border {
+    @media screen and (min-width: 992px) {
+        background-color: #00AFD7;
+    }
+}
+
+.speciality__hex.thin-border .speciality__hex {
+    @media screen and (min-width: 992px) {
+        transform: scale(.98, .98);
+        z-index: 1;
+    }
+}
+
+.speciality__hex.thin-border::before {
+    @media screen and (min-width: 992px) {
+        border-right-color: #00AFD7;
+    }
+}
+
+.speciality__hex.thin-border::after {
+    @media screen and (min-width: 992px) {
+        border-left-color: #00AFD7;
+    }
+}
+
+.speciality__hex.thick-border {
+    @media screen and (min-width: 992px) {
+        background-color: #FFF;
+    }
+}
+
+.speciality__hex.thick-border .speciality__hex {
+    @media screen and (min-width: 992px) {
+        transform: scale(.9, .9);
+        z-index: 2;
+    }
+}
+
+.speciality__hex.thick-border::before {
+    @media screen and (min-width: 992px) {
+        border-right-color: #FFF;
+    }
+}
+
+.speciality__hex.thick-border::after {
+    @media screen and (min-width: 992px) {
+        border-left-color: #FFF;
+    }
+}
+
+.speciality-item {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 3.7rem auto;
+    text-align: center;
+    width: 18rem;
+    height: 15.6rem;
+
+    @media screen and (min-width: 992px) {
+        margin: 0;
+        width: auto;
+        height: auto;
+    }
+    
+    &.lg {
+        .speciality__hex {
+            @media screen and (min-width: 992px) {
+                width: 120px;
+                height: 208.8px;
+            }
+
+            @media screen and (min-width: 1200px) {
+                width: 150px;
+                height: 261px;
+            }
+
+            &::before {
+                @media screen and (min-width: 992px) {
+                    left: -60px;
+                    border-right-width: 60px;
+                    border-top-width: 104.4px;
+                    border-bottom-width: 104.4px;
+                }
+
+                @media screen and (min-width: 1200px) {
+                    left: -75px;
+                    border-right-width: 75px;
+                    border-top-width: 130.5px;
+                    border-bottom-width: 130.5px;
+                }
+            }
+
+            &::after {
+                @media screen and (min-width: 992px) {
+                    right: -60px;
+                    border-left-width: 60px;
+                    border-top-width: 104.4px;
+                    border-bottom-width: 104.4px;
+                }
+
+                @media screen and (min-width: 1200px) {
+                    right: -75px;
+                    border-left-width: 75px;
+                    border-top-width: 130.5px;
+                    border-bottom-width: 130.5px;
+                }
+            }
+        }
+
+        .speciality__hex.thin-border {
+            @media screen and (min-width: 992px) {
+                background-color: #016d9e;
+            }
+
+            &::before {
+                @media screen and (min-width: 992px) {
+                    border-right-color: #016d9e;
+                }
+            }
+
+            &::after {
+                @media screen and (min-width: 992px) {
+                    border-left-color: #016d9e;
+                }
+            }
+        }
+
+        .speciality__hex.thick-border {
+            @media screen and (min-width: 992px) {
+                background-color: #016d9e;
+            }
+
+            &::before {
+                @media screen and (min-width: 992px) {
+                    border-right-color: #016d9e;
+                }
+            }
+
+            &::after {
+                @media screen and (min-width: 992px) {
+                    border-left-color: #016d9e;
+                }
+            }
+        }
+
+        .speciality__hex:not(.thin-border):not(.thick-border) {
+            @media screen and (min-width: 992px) {
+                background-color: #FFF;
+                color: #404040;
+            }
+
+            &::before {
+                @media screen and (min-width: 992px) {
+                    border-right-color: #FFF;
+                }
+            }
+
+            &::after {
+                @media screen and (min-width: 992px) {
+                    border-left-color: #FFF;
+                }
+            }
+        }
+
+        .speciality__icon {
+            @media screen and (min-width: 992px) {
+                margin-top: 4rem;
+            }
+
+            @media screen and (min-width: 1200px) {
+                margin-top: 4rem;
+            }
+        }
+    }
+
+    &:not(.lg):hover,
+    &:not(.lg).is-active {
+        .speciality__hex:not(.thin-border):not(.thick-border) {
+            background-color: #00a8c8;
+
+            &::before {
+                border-right-color: #00a8c8;
+            }
+
+            &::after {
+                border-left-color: #00a8c8;
+            }
+        }
+    }
+
+    &.lg:hover,
+    &.lg.is-active {
+        .speciality__hex.thin-border,
+        .speciality__hex.thick-border {
+            background-color: #00a8c8;
+
+            &::before {
+                border-right-color: #00a8c8;
+            }
+
+            &::after {
+                border-left-color: #00a8c8;
+            }
+        }
+    }
+
+    @include modifier("quality") {
+        @media screen and (min-width: 992px) {
+            position: absolute;
+            left: 40px;
+            bottom: 0;
+        }
+
+        @media screen and (min-width: 1200px) {
+            left: 50px;
+        }
+    }
+
+    @include modifier("subject-matter") {
+        @media screen and (min-width: 992px) {
+            position: absolute;
+            left: 40px;
+            bottom: 198px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            left: 50px;
+            bottom: 240px;
+        }
+    }
+
+    @include modifier("digital-experts") {
+        @media screen and (min-width: 992px) {
+            position: absolute;
+            left: 208px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            left: 265px;
+        }
+    }
+
+    @include modifier("consultancy") {
+        @media screen and (min-width: 992px) {
+            position: absolute;
+            left: 382px;
+            bottom: 198px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            left: 475px;
+            bottom: 240px;
+        }
+    }
+
+    @include modifier("knowledge-mgmt") {
+        @media screen and (min-width: 992px) {
+            position: absolute;
+            left: 382px;
+            bottom: 0;
+        }
+
+        @media screen and (min-width: 1200px) {
+            left: 475px;
+        }
+    }
+
+    @include modifier("ui-ux") {
+        @media screen and (min-width: 992px) {
+            position: absolute;
+            left: 190px;
+            bottom: 64px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            left: 240px;
+            bottom: 76px;
+        }
+    }
+}
+
+.speciality-content {
+    @include element("subheading") {
+        color: #404040;
+        font-size: 1.6rem;
+        text-align: center;
+
+        @media screen and (min-width: 992px) {
+            font-size: 2.8rem;
+        }
+    }
+
+    @include element("p") {
+        color: #808080;
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        margin-top: 1.4rem;
+
+        @media screen and (min-width: 992px) {
+            font-size: 1.8rem;
+            line-height: 2.6rem;
+            margin-top: 2rem;
+        }
+    }
+
+    &.is-m {
+        margin-bottom: 3.7rem;
+    }
+}

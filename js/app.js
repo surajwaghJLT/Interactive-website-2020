@@ -10,6 +10,26 @@ function initMap() {
     });
 }
 
+function displaySpecialityContent() {
+    if ($(".speciality-item.is-active").length) {
+        var target = $(".speciality-item.is-active").data("target-id");
+
+        if (window.matchMedia("(min-width: 992px)").matches) {
+            var $targetEl = $(".speciality-content[data-id='" + target + "']:not(.is-m)")
+            if ($targetEl.length) {
+                $(".speciality-content").addClass("d-none");
+                $targetEl.removeClass("d-none");
+            }
+        } else {
+            var $targetEl = $(".speciality-content.is-m[data-id='" + target + "']")
+            if ($targetEl.length) {
+                $(".speciality-content").addClass("d-none");
+                $targetEl.hide().removeClass("d-none").slideDown();
+            }
+        }        
+    }
+}
+
 $(function () {
     $(".specialty__box").hover(
         function () {
@@ -37,10 +57,29 @@ $(function () {
             }, 200);
         }
     });
-});
 
-$(window).on("load", function () {
-    $(".flexslider").flexslider({
-        animation: "slide"
+    var swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+    displaySpecialityContent();
+
+    $(".speciality-item").on("click", function() {
+        if (!$(this).hasClass("is-active")) {
+            $(".speciality-item").removeClass("is-active");
+            $(this).addClass("is-active");
+            displaySpecialityContent();
+        }
+    });
+
+    $(window).resize(function() {
+        displaySpecialityContent();
     });
 });

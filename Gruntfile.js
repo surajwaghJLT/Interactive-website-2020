@@ -54,6 +54,7 @@ module.exports = function (grunt) {
                         "node_modules/bootstrap/dist/css/bootstrap.min.css",
                         "node_modules/animate.css/animate.min.css",
                         "node_modules/flexslider/flexslider.css",
+                        "node_modules/swiper/swiper-bundle.min.css",
                     ]
                 }
             }
@@ -69,6 +70,7 @@ module.exports = function (grunt) {
                     "node_modules/jquery/dist/jquery.min.js",
                     "node_modules/flexslider/jquery.flexslider.js",
                     "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+                    "node_modules/swiper/swiper-bundle.min.js",
                 ],
                 dest: "js/lib.js"
             }
