@@ -2,7 +2,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: #404040;
+    background-color: #616A74;
     color: #FFF;
 
     @include element("content") {
@@ -76,7 +76,7 @@
 
         &:hover,
         &:focus {
-            background-color: #404040;
+            background-color: #616A74;
             border: 1px solid #FFF;
             color: #FFF;
             text-decoration: none;

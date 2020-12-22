@@ -22,7 +22,7 @@ function displaySpecialityContent() {
             }
         } else {
             var $targetEl = $(".speciality-content.is-m[data-id='" + target + "']")
-            if ($targetEl.length) {
+            if ($targetEl.length && $targetEl.hasClass("d-none")) {
                 $(".speciality-content").addClass("d-none");
                 $targetEl.hide().removeClass("d-none").slideDown();
             }

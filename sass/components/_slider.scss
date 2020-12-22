@@ -26,6 +26,15 @@
             line-height: 3.7rem;
             font-size: 3.2rem;
         }
+
+        a {
+            color: inherit;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
     }
 }
 

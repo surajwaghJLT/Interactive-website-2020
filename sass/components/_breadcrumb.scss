@@ -1,0 +1,49 @@
+.breadcrumb {
+    background-color: #F0F0F0;
+    font-weight: bold;
+    min-height: 2.8rem;
+    margin-bottom: 0;
+    margin-top: 1.6rem;
+
+    @media screen and (min-width: 992px) {
+        margin-top: 3rem;
+    }
+    
+    @include element("item") {
+        color: #00A8C8;
+        position: relative;
+        padding: 0 1.5rem 0 1rem;
+
+        &:first-child {
+            padding-left: 1.5rem;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0.2rem;
+                left: 0;
+                width: 1rem;
+                height: 1rem;
+                background-color: #808080;
+                border-radius: 50%;
+            }
+
+            &::after {
+                content: ">";
+                position: absolute;
+                right: 0;
+                color: #808080;
+            }
+        }
+    }
+
+    @include element("link") {
+        color: #808080;
+
+        &:hover,
+        &:focus {
+            color: #808080;
+            text-decoration: none;
+        }
+    }
+}
