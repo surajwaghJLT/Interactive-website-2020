@@ -10,23 +10,31 @@ function initMap() {
     });
 }
 
-function displaySpecialityContent() {
-    if ($(".speciality-item.is-active").length) {
-        var target = $(".speciality-item.is-active").data("target-id");
-
+function displaySpecialityContent($source) {
+    if ($(".specialty__item.is-active").length) {
+        if ($source) {
+            var target = $source.data("target-id");
+        } else {
+            var target = $(".specialty__item.is-active").data("target-id");
+        }
+        
         if (window.matchMedia("(min-width: 992px)").matches) {
-            var $targetEl = $(".speciality-content[data-id='" + target + "']:not(.is-m)")
+            var $targetEl = $(".specialty__content[data-id='" + target + "']:not(.is-m)");
             if ($targetEl.length) {
-                $(".speciality-content").addClass("d-none");
+                $(".specialty__content").addClass("d-none");
                 $targetEl.removeClass("d-none");
             }
         } else {
-            var $targetEl = $(".speciality-content.is-m[data-id='" + target + "']")
+            var $targetEl = $(".specialty__content.is-m[data-id='" + target + "']");
             if ($targetEl.length && $targetEl.hasClass("d-none")) {
-                $(".speciality-content").addClass("d-none");
                 $targetEl.hide().removeClass("d-none").slideDown();
+            } else if ($targetEl.length && !$targetEl.hasClass("d-none") && $source) {
+                $targetEl.slideUp(400, function() { $targetEl.removeAttr("style").addClass("d-none"); });
+                $source.removeClass("is-active");
             }
         }        
+    } else {
+        $(".specialty__item:first-child .specialty__box").click();
     }
 }
 
@@ -71,11 +79,18 @@ $(function () {
 
     displaySpecialityContent();
 
-    $(".speciality-item").on("click", function() {
-        if (!$(this).hasClass("is-active")) {
-            $(".speciality-item").removeClass("is-active");
-            $(this).addClass("is-active");
-            displaySpecialityContent();
+    $(".specialty__box").on("click", function() {
+        var $clickedParentItem = $(this).parent(".specialty__item");
+
+        if (window.matchMedia("(min-width: 992px)").matches) {
+            if (!$clickedParentItem.hasClass("is-active")) {
+                $(".specialty__item").removeClass("is-active");
+                $clickedParentItem.addClass("is-active");
+                displaySpecialityContent($clickedParentItem);
+            }
+        } else {
+            $clickedParentItem.addClass("is-active");
+            displaySpecialityContent($clickedParentItem);
         }
     });
 
