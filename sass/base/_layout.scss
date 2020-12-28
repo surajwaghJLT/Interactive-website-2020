@@ -1100,7 +1100,9 @@ sup.required {
             &.second-of-four,
             &.third-of-four,
             &.fourth-of-four,
-            &.first-of-one-2 {
+            &.first-of-one-2,
+            &.first-of-two-2,
+            &.second-of-two-2 {
                 position: relative;
 
                 &::before {
@@ -1186,11 +1188,40 @@ sup.required {
                 }
 
                 &::after {
-                    top: -20rem;
+                    top: -21.5rem;
                     left: 9.6rem;
-                    height: 17.8rem;
+                    height: 19.2rem;
                     border-style: solid;
                     border-width: 0 0 0 0.1rem;
+                }
+            }
+
+            &.first-of-two-2 {
+                &::before {
+                    top: -24rem;
+                    left: 0rem;
+                    width: 1.5rem;
+                    height: 24.9rem;
+                    border-width: 0 0 .1rem .1rem;
+                }
+
+                &::after {
+                    top: -24rem;
+                    left: 0;
+                    width: 10rem;
+                    height: 1rem;
+                    border-style: solid;
+                    border-width: .1rem 0 0 0;
+                }
+            }
+
+            &.second-of-two-2 {
+                &::before {
+                    top: -23.5rem;
+                    left: 0rem;
+                    width: 1.5rem;
+                    height: 24.4rem;
+                    border-width: 0 0 .1rem .1rem;
                 }
             }
         }
@@ -1210,10 +1241,46 @@ sup.required {
                 }
             }
 
+            &.second-of-four {
+                &::before {
+                    width: 20rem;
+                }
+
+                &::after {
+                    left: 21.6rem;
+                }
+            }
+
             &.fourth-of-four {
                 &::before {
                     left: -14.2rem;
                     width: 16rem;
+                }
+            }
+
+            &.first-of-one-2 {
+                &::after {
+                    top: -20rem;
+                    height: 17.8rem;
+                }
+            }
+
+            &.first-of-two-2 {
+                &::before {
+                    top: -19rem;
+                    height: 19.9rem;
+                }
+
+                &::after {
+                    top: -19rem;
+                    width: 14.5rem;
+                }
+            }
+
+            &.second-of-two-2 {
+                &::before {
+                    top: -18rem;
+                    height: 18.9rem;
                 }
             }
         }
