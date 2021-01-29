@@ -14,7 +14,6 @@
   "license": "ISC",
   "description": "JLTi Website revamp",
   "dependencies": {
-    "animate.css": "^4.1.0",
     "bootstrap": "^4.5.0",
     "grunt": "^1.2.1",
     "grunt-combine-media-queries": "^1.0.20",

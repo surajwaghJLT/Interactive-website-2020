@@ -43,7 +43,6 @@ module.exports = function (grunt) {
                 files: {
                     "style/lib.min.css": [
                         "node_modules/bootstrap/dist/css/bootstrap.min.css",
-                        "node_modules/animate.css/animate.min.css",
                         "node_modules/swiper/swiper-bundle.min.css",
                     ]
                 }

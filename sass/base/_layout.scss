@@ -305,13 +305,31 @@ sup.required {
         margin: 2.2rem auto 0 auto;
     }
 
-    @include element("facts") {
-        overflow: scroll;
-        padding-bottom: 1rem;
-        margin: 2.5rem 0;
+    @include element("facts-container") {
         position: relative;
 
         @media screen and (min-width: 992px) {
+            position: initial;
+        }
+    }
+
+    @include element("facts") {
+        cursor: pointer;
+        overflow: hidden;
+        padding-bottom: 1rem;
+        margin: 2.5rem 0;
+
+        &.is-touch {
+            overflow: scroll;
+        }
+        
+        &.on-press {
+            cursor: grabbing;
+            cursor: -webkit-grabbing;
+        }
+
+        @media screen and (min-width: 992px) {
+            cursor: default;
             position: static;
             overflow: visible;
             padding-bottom: 0;
@@ -319,7 +337,33 @@ sup.required {
         }
     }
 
+    @include element("facts-la") {
+        border: 0 none;
+        outline: none;
+        position: absolute;
+        font-size: 4rem;
+        top: -15%;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 3rem;
+        text-align: center;
+
+        &.is-disabled {
+            opacity: 0.4;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        @media screen and (min-width: 992px) {
+            display: none;
+        }
+    }
+
     @include element("facts-ra") {
+        border: 0 none;
+        outline: none;
         position: absolute;
         font-size: 4rem;
         top: -15%;
@@ -328,13 +372,21 @@ sup.required {
         width: 3rem;
         text-align: center;
 
+        &.is-disabled {
+            opacity: 0.4;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
         @media screen and (min-width: 992px) {
             display: none;
         }
     }
 
     @include element("facts-inner") {
-        min-width: 80rem;
+        min-width: 82rem;
         overflow: hidden;
 
         @media screen and (min-width: 992px) {
@@ -344,8 +396,10 @@ sup.required {
 
     @include element("fact-left") {
         display: inline-block;
+        margin-left: 2rem;
 
         @media screen and (min-width: 992px) {
+            margin-left: 0;
             position: absolute;
             top: 40%;
             left: 1.5rem;
