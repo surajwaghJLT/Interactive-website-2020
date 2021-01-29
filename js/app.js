@@ -37,7 +37,7 @@ function toggleGlobalReachSliderArrows() {
         $(".global-reach__facts-la").prop("disabled", false).removeClass("is-disabled");
     }
 
-    if ($(".global-reach__facts").get(0).scrollWidth - $(".global-reach__facts").scrollLeft() == $(".global-reach__facts").outerWidth()) {
+    if (parseInt($(".global-reach__facts").get(0).scrollWidth - $(".global-reach__facts").scrollLeft()) === parseInt($(".global-reach__facts").outerWidth())) {
         $(".global-reach__facts-ra").prop("disabled", true).addClass("is-disabled");
     } else {
         $(".global-reach__facts-ra").prop("disabled", false).removeClass("is-disabled");
