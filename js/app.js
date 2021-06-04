@@ -5,7 +5,7 @@ function isTouchDevice() {
 function displaySpecialityContent($source) {
     if ($(".specialty__item.is-active").length) {
         if ($source) {
-            var target = $source.data("target-id");
+            var target = $source.data("target-id");;
         } else {
             var target = $(".specialty__item.is-active").data("target-id");
         }
